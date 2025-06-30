@@ -6,13 +6,13 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:18:17 by ktolba            #+#    #+#             */
-/*   Updated: 2025/06/02 21:38:13 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/06/06 16:03:41 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_putnbr_pf(int nbr)
+int	ft_putnbr_pf(int nb)
 {
 	long int	nbr;
 	int			len;
@@ -21,7 +21,7 @@ int	ft_putnbr_pf(int nbr)
 	len = 0;
 	if (nbr < 0)
 	{
-		write(fd, "-", 1);
+		write(1, "-", 1);
 		nbr *= -1;
 		len++;
 	}

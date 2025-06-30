@@ -6,11 +6,11 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 11:49:43 by ktolba            #+#    #+#             */
-/*   Updated: 2025/06/02 21:48:44 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/06/06 16:02:29 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *str, ...)
 {
@@ -26,9 +26,8 @@ int	ft_printf(const char *str, ...)
 		if (str[i] == '%' && str[i + 1])
 			len += ft_dispatch_args(args, &str[i]);
 		else
-			ft_putchar(str[i]);
+			len += ft_putchar_pf(str[i]);
 		i++;
-		len++;
 	}
 	va_end(args);
 	return (len);

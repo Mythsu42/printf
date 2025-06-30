@@ -6,11 +6,11 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 22:12:06 by ktolba            #+#    #+#             */
-/*   Updated: 2025/06/02 21:41:26 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/06/06 16:04:07 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar_pf(char c)
 {

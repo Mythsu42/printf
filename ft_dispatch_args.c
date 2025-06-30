@@ -6,11 +6,11 @@
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 17:06:06 by ktolba            #+#    #+#             */
-/*   Updated: 2025/06/02 21:29:13 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/06/06 16:03:15 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_dispatch_args(va_list args, const char *str)
 {
@@ -23,9 +23,9 @@ int	ft_dispatch_args(va_list args, const char *str)
 	if (*str == 'u')
 		return (ft_put_unsigned_pf(va_arg(args, unsigned int)));
 	if (*str == 'x')
-		return (ft_puthex_pf(va_arg(args, 0, unsigned int)));
+		return (ft_puthex_pf(va_arg(args, unsigned int), 0));
 	if (*str == 'X')
-		return (ft_puthex_pf(va_arg(args, 1, unsigned int)));
+		return (ft_puthex_pf(va_arg(args, unsigned int), 1));
 	if (*str == 'p')
 		return (ft_putptr_pf(va_arg(args, void *)));
 	if (*str == '%')

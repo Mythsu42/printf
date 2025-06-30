@@ -1,32 +1,31 @@
-NAME = ft_printf
+NAME = libftprintf.a
 
-SRCS = ft_printf.c main.c
+SRCS =	ft_printf.c\
+		ft_dispatch_args.c\
+		ft_putchar_pf.c\
+		ft_putnbr_pf.c\
+		ft_putstr_pf.c\
+		ft_put_unsigned_pf.c\
+		ft_puthex_pf.c\
+		ft_putptr_pf.c
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
-LIBFT_DIR = libft
-LIBFT = $(LIBFT_DIR)/libft.a
-INCLUDES = -I$(LIBFT_DIR)
-
-all: $(LIBFT) $(NAME)
-
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(INCLUDES) -o $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
-$(LIBFT):
-	make -C $(LIBFT_DIR)
+%.o: %.c
+	$(CC) $(CLAGS)-c $< -o $@
 
 clean:
 	$(RM) $(OBJS)
-	make -C $(LIBFT_DIR) clean
 
 fclean: clean
 	$(RM) $(NAME)
-	make -C $(LIBFT_DIR) fclean
 
-re: fclean all
+re: fclean
 
 .PHONY: all clean fclean re
