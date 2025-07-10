@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_puthex_pf(unsigned int nbr, int typecase)
+int	ft_puthex_pf(unsigned long nbr, int typecase)
 {
 	char	*base;
 	int		len;
@@ -24,6 +24,6 @@ int	ft_puthex_pf(unsigned int nbr, int typecase)
 		base = "0123456789abcdef";
 	if (nbr >= 16)
 		len += ft_puthex_pf(nbr / 16, typecase);
-	len += ft_putchar_pf(base[nbr % 16] + '0');
+	len += ft_putchar_pf(base[nbr % 16]);
 	return (len);
 }

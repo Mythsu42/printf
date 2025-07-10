@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
@@ -25,5 +25,5 @@ int	ft_putstr_pf(char *str);
 int	ft_putptr_pf(void *ptr);
 int	ft_putnbr_pf(int nbr);
 int	ft_put_unsigned_pf(unsigned int nbr);
-int	ft_puthex_pf(unsigned int nbr, int format);
+int	ft_puthex_pf(unsigned long nbr, int typecase);
 #endif

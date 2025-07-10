@@ -24,7 +24,10 @@ int	ft_printf(const char *str, ...)
 	while (str[i])
 	{
 		if (str[i] == '%' && str[i + 1])
-			len += ft_dispatch_args(args, &str[i]);
+		{
+			len += ft_dispatch_args(args, &str[i + 1]);
+			i++;
+		}
 		else
 			len += ft_putchar_pf(str[i]);
 		i++;

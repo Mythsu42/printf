@@ -25,7 +25,7 @@ int	ft_putnbr_pf(int nb)
 		nbr *= -1;
 		len++;
 	}
-	while (nbr > 9)
+	if (nbr > 9)
 		len += ft_putnbr_pf(nbr / 10);
 	len += ft_putchar_pf(nbr % 10 + '0');
 	return (len);
