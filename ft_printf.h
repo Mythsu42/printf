@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktolba <tolbakevin@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 11:56:11 by ktolba            #+#    #+#             */
-/*   Updated: 2025/06/04 14:09:06 by ktolba           ###   ########.fr       */
+/*   Updated: 2025/07/11 04:10:57 by ktolba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_putptr_pf(void *ptr);
 int	ft_putnbr_pf(int nbr);
 int	ft_put_unsigned_pf(unsigned int nbr);
 int	ft_puthex_pf(unsigned int nbr, int typecase);
-int     ft_puthexptr_pf(size_t nbr);
+int	ft_puthexptr_pf(size_t nbr);
 #endif
