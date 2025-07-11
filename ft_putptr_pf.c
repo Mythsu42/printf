@@ -12,17 +12,30 @@
 
 #include "ft_printf.h"
 
-int	ft_putptr_pf(void *ptr)
+int	ft_puthexptr_pf(size_t nbr)
 {
-	unsigned long	address;
-	int				len;
+	char	*base;
+	int		len;
 
 	len = 0;
-	address = (unsigned long)ptr;
+	base = "0123456789abcdef";
+	if (nbr >= 16)
+		len += ft_puthexptr_pf(nbr / 16);
+	len += ft_putchar_pf(base[nbr % 16]);
+	return (len);
+}
+
+int	ft_putptr_pf(void *ptr)
+{
+	int		len;
+
+	len = 0;
+	if (ptr == NULL)
+		return (ft_putstr_pf("(nil)"));
 	len += ft_putstr_pf("0x");
-	if (address == 0)
+	if (ptr == 0)
 		len += ft_putchar_pf('0');
 	else
-		len += ft_puthex_pf(address, 0);
+		len += ft_puthexptr_pf((size_t)ptr);
 	return (len);
 }

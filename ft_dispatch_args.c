@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_dispatch_args(va_list args,const char *str)
+int	ft_dispatch_args(va_list args, const char *str)
 {
 	if (*str == 'c')
 		return (ft_putchar_pf(va_arg(args, int)));

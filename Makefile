@@ -14,6 +14,8 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 
+all: $(NAME)
+
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 

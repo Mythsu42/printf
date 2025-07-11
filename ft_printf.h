@@ -25,5 +25,6 @@ int	ft_putstr_pf(char *str);
 int	ft_putptr_pf(void *ptr);
 int	ft_putnbr_pf(int nbr);
 int	ft_put_unsigned_pf(unsigned int nbr);
-int	ft_puthex_pf(unsigned long nbr, int typecase);
+int	ft_puthex_pf(unsigned int nbr, int typecase);
+int     ft_puthexptr_pf(size_t nbr);
 #endif
