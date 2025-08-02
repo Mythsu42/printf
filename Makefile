@@ -28,6 +28,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean
+re: fclean $(OBJS)
 
 .PHONY: all clean fclean re
